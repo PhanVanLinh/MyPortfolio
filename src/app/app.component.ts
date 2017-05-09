@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Linh Portfolio';
+  title = 'MY RESUME';
   author = '{ PHAN VĂN LINH }';
   major = 'Android/IOS/Web Developer';
   location = '@location: Danang, Vietnam ';
@@ -15,19 +15,28 @@ export class AppComponent {
   about = 'A Full Stack Developer with nearly 3 years of experience in Software Development, Project Maintenance and Project Publication.';
   navigations = [
     {
-      name: 'About'
+      name: 'About',
+      icon: 'dashboard'
     },
     {
       name: 'Experiences',
+      icon: 'storage'
     },
     {
       name: 'Skills',
+      icon: 'toys'
     },
     {
       name: 'Education',
+      icon: 'account_balance'
     },
     {
-	  name: 'Arround the Web'
+	    name: 'Volunteerism',
+      icon: 'face'
+    },
+    {
+      name: 'Arround the Web',
+      icon: 'cloud'
     }
   ];
 
@@ -139,6 +148,14 @@ export class AppComponent {
     {text: 'Duolingo', image: 'assets/img/no_image.png', icon:'assets/img/social/duolingo.png', content:'English : Level 13 (5606 XP). Finish Duolingo tree', time: '2015'},
     {text: 'Github', image: 'assets/img/no_image.png', icon:'assets/img/social/github.png', cols: 1, rows: 1, content: 'Points: 306. Hackos: 236', time: '03/2017'},
     {text: 'HackerRank', image: 'assets/img/no_image.png', icon:'assets/img/social/hackerrank.png', cols: 2, rows: 1, color: '#DDBDF1', time: '10/2015'},
+  ];
+
+  volunteerisms = [
+    {
+      place: 'Passerelles numériques Vietnam',
+      time: '2015 - Present',
+      details: 'Each year, from September to May I always support students at my old school learning about C, Java, Android and English in 2h in the evening (6h-8h) for onece or twice times a week '
+    }
   ];
 
   aroundTheWebs = [
