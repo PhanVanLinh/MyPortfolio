@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~https://fonts.googleapis.com/icon?family=Roboto';
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background: #243036;
+}
+
+a{
+  color: #f7777d;
+}
+
+h1{
+  font-weight: 500;
+}
+
+h2{
+   color: #dffa96;
+}
+
+md-toolbar{
+  background: transparent !important;
+}
+
+md-divider{
+  background-color: #5cffd9;
+}
+
+md-sidenav-container{
+  background-color: transparent !important;
+}
+
+md-card {
+  max-width: 80%;
+  margin: 2em auto;
+  background-color : transparent !important; 
+}
+
+
+md-card-title{
+  color: #7698de;
+}
+
+
+md-toolbar-row {
+  justify-content: space-between;
+}
+
+
+md-chip{
+  background-color: #ffff00 important;
+}
+
+.content_container{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+
+.example-sidenav-fab-container .md-sidenav-content,
+.example-sidenav-fab-container md-sidenav {
+  display: flex;
+  overflow: visible;
+  background-color: transparent;
+}
+
+.example-scrolling-content {
+  
+  min-height: 100%;
+}
+
+.example-fab {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.my_card{
+	text-align: left;
+}

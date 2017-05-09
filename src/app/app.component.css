@@ -1,0 +1,27 @@
+.contact_text{
+	color: #99c27a;
+}
+
+
+.social_activity_card{
+	height: 200px;
+}
+.social_activity_icon{
+	width: 30px;
+	height: 30px;
+}
+.social_activity_text_title{
+	text-align: left;
+}
+.social_activity_text_sub_title{
+	text-align: left;
+}
+.social_activity_image{
+	padding: 0 10px;
+	width: 100%;
+	height: 75px;
+	//object-fit: cover;
+}
+.social_activity_content{
+	text-align: left;
+}
