@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
-@import '~@angular/material/prebuilt-themes/purple-green.css';
+/*@import '~@angular/material/prebuilt-themes/purple-green.css';*/
 @import '~https://fonts.googleapis.com/icon?family=Roboto';
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  background: #243036;
+  background-image: url("assets/img/general/bg.jpg");
+  color: #ffffff;
+  font-size: 18px;
 }
 
 a{
@@ -14,7 +16,7 @@ a{
 }
 
 h1{
-  font-weight: 500;
+  font-weight: 800;
 }
 
 h2{

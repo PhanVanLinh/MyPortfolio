@@ -2,6 +2,14 @@
 	color: #99c27a;
 }
 
+.navigation a{
+	color: rgba(255,255,255,0.5);
+	text-decoration: none;
+}
+
+.navigation a:hover{
+	color: rgb(255,255,255);
+}
 
 .social_activity_card{
 	height: 200px;

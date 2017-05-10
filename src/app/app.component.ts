@@ -40,6 +40,18 @@ export class AppComponent {
     }
   ];
 
+  careerHighlights = [
+    {
+      title: 'Created six user-friendly, aesthetically pleasing and fully functional applications for Android and iOs',
+    },
+    {
+      title: 'Solid understanding of full mobile and software development life cycles, UIX, web analytics, changing web standards, and Agile methodologies.',
+    },
+    {
+      title: 'Experiences working with MVC, MVP, MVVM and some design patterns',
+    }
+  ];
+
   workingExperiences = [
   	{
   		company: {
@@ -59,7 +71,7 @@ export class AppComponent {
   		},
   		time:'03/2015-10/2016',
   		position: 'Android Developer',
-  		description:'a'
+  		description:'Maintained long and short-range deliverables with product management team.'
   	},
   	{
   		company: {
@@ -144,10 +156,10 @@ export class AppComponent {
   ];
 
   tiles = [
-    {text: 'StackOverFlow', image: 'http://stackoverflow.com/users/flair/5381331.png', icon:'assets/img/social/stackoverflow.png', content:'I have more than 300 answers, 80 questions, 500 helpful flags, 100 post edits on StackOverFlow', time: '10/2015'},
-    {text: 'Duolingo', image: 'assets/img/no_image.png', icon:'assets/img/social/duolingo.png', content:'English : Level 13 (5606 XP). Finish Duolingo tree', time: '2015'},
-    {text: 'Github', image: 'assets/img/no_image.png', icon:'assets/img/social/github.png', cols: 1, rows: 1, content: 'Points: 306. Hackos: 236', time: '03/2017'},
-    {text: 'HackerRank', image: 'assets/img/no_image.png', icon:'assets/img/social/hackerrank.png', cols: 2, rows: 1, color: '#DDBDF1', time: '10/2015'},
+    {text: 'StackOverFlow', image: 'http://stackoverflow.com/users/flair/5381331.png', icon:'assets/img/social/stackoverflow.png', content:'I have more than 300 answers, 80 questions, 500 helpful flags, 100 post edits on StackOverFlow', time: '10/2015', hasImage: 'true'},
+    {text: 'Duolingo', image: '', icon:'assets/img/social/duolingo.png', content:'I reach English Level 13 (5606 XP) and finished Duolingo Learning tree', time: '2015', hasImage: 'false'},
+    {text: 'Github', image: '', icon:'assets/img/social/github.png', content: 'Not much achieve. Currently, I use Github for manage some of my demo projects', time: '03/2017', hasImage: 'false'},
+    {text: 'HackerRank', image: '', icon:'assets/img/social/hackerrank.png', content:'I achieved 306 points and 236 hackos by resolve more than 20 algorithm tests', time: '10/2015', hasImage: 'false'},
   ];
 
   volunteerisms = [
