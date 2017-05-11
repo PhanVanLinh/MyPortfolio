@@ -13,6 +13,7 @@
 
 .social_activity_card{
 	height: 200px;
+	cursor: pointer;
 }
 .social_activity_icon{
 	width: 30px;
@@ -32,4 +33,37 @@
 }
 .social_activity_content{
 	text-align: left;
+}
+
+footer{
+	margin-top: 40px;
+	height: 64px;
+	background: rgba(0,0,0,0.1);
+	text-align: center;
+}
+
+footer p{
+	font-style: italic;
+	margin: 0px;
+	vertical-align: middle;
+	display: inline;
+	font-size: 15px;
+	line-height: 64px;
+}
+
+footer a{
+	font-size: 14px;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+}
+
+li {
+    display: inline;
+}
+
+footer a{
+	text-decoration: underline;
 }

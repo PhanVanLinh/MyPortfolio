@@ -12,7 +12,8 @@ body {
 }
 
 a{
-  color: #f7777d;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 h1{
@@ -24,16 +25,20 @@ h2{
 }
 
 md-toolbar{
-  background: transparent !important;
+  background: rgba(0,0,0,0.2) !important;
 }
 
 md-divider{
   background-color: #5cffd9;
 }
 
-md-sidenav-container{
-  background-color: transparent !important;
+md-sidenav{
+   background: rgba(0,0,0,0.1) !important;
 }
+
+/*md-sidenav-container{
+  background: rgba(0,0,0,0.5) !important;
+}*/
 
 md-card {
   max-width: 80%;
@@ -56,11 +61,16 @@ md-chip{
   background-color: #ffff00 important;
 }
 
+.container{
+  max-width: 100%;
+  overflow-y: scroll;
+  height: calc(100vh - 65px);
+}
+
 .content_container{
   max-width: 80%;
   margin: 0 auto;
 }
-
 
 .done {
   position: fixed;

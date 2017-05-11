@@ -16,27 +16,42 @@ export class AppComponent {
   navigations = [
     {
       name: 'About',
-      icon: 'dashboard'
+      icon: 'dashboard',
+      link: '#about'
+    },{
+      name: 'Career Highlights',
+      icon: 'subject',
+       link: '#careerHighlights'
     },
     {
       name: 'Experiences',
-      icon: 'storage'
+      icon: 'storage',
+       link: '#workingExperiences'
+    },
+    {
+      name: 'Social Activities',
+      icon: 'cloud',
+      link: '#socialActivities'
     },
     {
       name: 'Skills',
-      icon: 'toys'
+      icon: 'toys',
+       link: '#skills'
     },
     {
       name: 'Education',
-      icon: 'account_balance'
+      icon: 'account_balance',
+       link: '#educations'
     },
     {
 	    name: 'Volunteerism',
-      icon: 'face'
+      icon: 'face',
+       link: '#volunteerism'
     },
     {
-      name: 'Arround the Web',
-      icon: 'cloud'
+      name: 'Hobbies',
+      icon: 'thumb_up',
+      link: '#hobbies'
     }
   ];
 
@@ -49,6 +64,9 @@ export class AppComponent {
     },
     {
       title: 'Experiences working with MVC, MVP, MVVM and some design patterns',
+    },
+    {
+      title: 'My English still not very good but I am sure that I can and want to work in the enviroment where using full English'
     }
   ];
 
@@ -71,7 +89,7 @@ export class AppComponent {
   		},
   		time:'03/2015-10/2016',
   		position: 'Android Developer',
-  		description:'Maintained long and short-range deliverables with product management team.'
+  		description:'Maintained long and short-range deliverables with product management team. '
   	},
   	{
   		company: {
@@ -155,12 +173,39 @@ export class AppComponent {
     },
   ];
 
-  tiles = [
-    {text: 'StackOverFlow', image: 'http://stackoverflow.com/users/flair/5381331.png', icon:'assets/img/social/stackoverflow.png', content:'I have more than 300 answers, 80 questions, 500 helpful flags, 100 post edits on StackOverFlow', time: '10/2015', hasImage: 'true'},
-    {text: 'Duolingo', image: '', icon:'assets/img/social/duolingo.png', content:'I reach English Level 13 (5606 XP) and finished Duolingo Learning tree', time: '2015', hasImage: 'false'},
-    {text: 'Github', image: '', icon:'assets/img/social/github.png', content: 'Not much achieve. Currently, I use Github for manage some of my demo projects', time: '03/2017', hasImage: 'false'},
-    {text: 'HackerRank', image: '', icon:'assets/img/social/hackerrank.png', content:'I achieved 306 points and 236 hackos by resolve more than 20 algorithm tests', time: '10/2015', hasImage: 'false'},
-  ];
+  tiles = [{
+        text: 'StackOverFlow',
+        image: 'http://stackoverflow.com/users/flair/5381331.png',
+        icon: 'assets/img/social/stackoverflow.png',
+        content: 'I have more than 300 answers, 80 questions, 500 helpful flags, 100 post edits on StackOverFlow',
+        time: '10/2015',
+        link: 'http://stackoverflow.com/users/5381331/phan-van-linh'
+    },
+    {
+        text: 'Duolingo',
+        image: '',
+        icon: 'assets/img/social/duolingo.png',
+        content: 'I reach English Level 13 (5606 XP) and finished Duolingo Learning tree',
+        time: '2015',
+        link: 'https://www.duolingo.com/LinhPhanVan'
+    },
+    {
+        text: 'Github',
+        image: '',
+        icon: 'assets/img/social/github.png',
+        content: 'Not much achieve. Currently, I use Github for manage some of my demo projects',
+        time: '03/2017',
+        link: 'https://github.com/PhanVanLinh'
+    },
+    {
+        text: 'HackerRank',
+        image: '',
+        icon: 'assets/img/social/hackerrank.png',
+        content: 'I achieved 306 points and 236 hackos by resolve more than 20 algorithm tests',
+        time: '10/2015',
+        link: 'https://www.hackerrank.com/phanvanlinh_94vn?hr_r=1'
+    },
+];
 
   volunteerisms = [
     {
@@ -215,4 +260,13 @@ export class AppComponent {
       title: 'Computer/Mobile Game',
     },
   ];
+
+  goToUrl(url): void {
+    window.location.href=url;
+  }
+
+  mailTo(): void{
+    window.open('mailto:test@example.com');
+  }
 }
+
