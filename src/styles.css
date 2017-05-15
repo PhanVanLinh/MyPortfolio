@@ -1,14 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
-/*@import '~@angular/material/prebuilt-themes/purple-green.css';*/
-@import '~https://fonts.googleapis.com/icon?family=Roboto';
+/*@import '~https://fonts.googleapis.com/icon?family=Material+Icons';*/
+/*@import '~https://fonts.googleapis.com/icon?family=Roboto';*/
+
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   background-image: url("assets/img/general/bg.jpg");
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+p{
+  margin: 0px;
+}
+
+ul{
+  margin:0px;
+  padding: 5px;
 }
 
 a{
@@ -36,9 +46,9 @@ md-sidenav{
    background: rgba(0,0,0,0.1) !important;
 }
 
-/*md-sidenav-container{
-  background: rgba(0,0,0,0.5) !important;
-}*/
+md-sidenav-container{
+  background: rgba(0,0,0,0) !important;
+}
 
 md-card {
   max-width: 80%;
@@ -51,6 +61,9 @@ md-card-title{
   color: #7698de;
 }
 
+md-tooltip{
+  background-color: #ff0;
+}
 
 md-toolbar-row {
   justify-content: space-between;
@@ -58,7 +71,9 @@ md-toolbar-row {
 
 
 md-chip{
-  background-color: #ffff00 important;
+  background: rgb(221, 221, 221);
+  color: #000;
+  border-radius: 4px !important;
 }
 
 .container{
@@ -99,4 +114,21 @@ md-chip{
 
 .my_card{
 	text-align: left;
+}
+
+.title{
+  color: #7698de;
+  font-size: 24px;
+}
+
+.sub_title{
+  color: rgba(255,255,255,.7);
+}
+
+.details{
+  color: #ffffff;
+}
+
+#mutilple_lines{
+  white-space: normal;
 }

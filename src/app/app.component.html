@@ -1,19 +1,19 @@
 <div>
 	<md-toolbar color="primary">
-		<span><button md-icon-button (click)="sidenav.toggle()"><md-icon>menu</md-icon></button></span>
+		<span><button (click)="sidenav.toggle()"><img src="assets/img/menu/ic_menu.png" id="menu_icon"></button></span>
 
 		<span><b>{{title}}</b></span>
 
-		<button>
-			
-		</button>
+		<span></span>
 	</md-toolbar>
+
 	<md-sidenav-container>
 		<md-sidenav #sidenav mode="side" opened="true">
 			<md-list class="navigation">
-				<h3 md-subheader>Folders</h3>
 				<md-list-item *ngFor="let navigation of navigations">
-					<md-icon md-list-icon>{{navigation.icon}}</md-icon>
+
+					<img md-list-icon src="assets/img/menu/{{navigation.icon}}" id="navigation_icon" >
+
 					<a md-line href="{{navigation.link}}">{{navigation.name}}</a>
 				</md-list-item>
 			</md-list>
@@ -24,28 +24,27 @@
 				<div class="content_container">
 					<h1 id="about"> {{author}} </h1>
 					<h4> {{major}} </h4>
-					<p class="contact_text"> /** <br/>&nbsp;&nbsp;* {{location}} <br/>&nbsp;&nbsp;* {{phone}} <br/>&nbsp;&nbsp;* {{email}} <br/> &nbsp;&nbsp;*/
+					<p class="contact_text"> /**  <br/>&nbsp;&nbsp;* {{languages}}  <br/>&nbsp;&nbsp;* {{dateOfBirth}} <br/>&nbsp;&nbsp;* {{phone}} <br/>&nbsp;&nbsp;* {{email}} <br/> &nbsp;&nbsp;* {{location}} <br/> &nbsp;&nbsp;*/
 						<p> {{about}} </p>
 
-						<h2 id="careerHighlight"># Career Highlights</h2>	
+						<h2 id="careerHighlights"># Career Highlights</h2>	
 						<ul *ngFor="let careerHighlight of careerHighlights">
 							<li> <p>{{careerHighlight.title}} </p></li>
 						</ul>
 
 						<h2 id="workingExperiences"># Working Experiences</h2>
+
 						<md-list>
 							<md-list-item *ngFor="let working of workingExperiences">
-								<img md-list-avatar src={{working.company.logo}} alt="...">
-								<h3 md-line> {{working.company.name}} </h3>
-								<p md-line>
+								<img md-list-icon src={{working.company.logo}} id="card_icon" alt="...">
+								<h3 md-line class="title"> {{working.company.name}} </h3>
+								<p md-line class="sub_title">
 									<span> {{working.company.location}} </span>
 									<span> -- {{working.time}} </span>
-								</p>							
-								<p md-line>
-									{{working.description}}
 								</p>
+								<p md-line class="details" id="mutilple_lines">{{working.description}}</p>
 							</md-list-item>
-						</md-list>
+						</md-list>	
 
 						<h2 id="socialActivities"># Social Activities </h2>
 						<md-grid-list cols="4" rowHeight="300px">
@@ -53,7 +52,7 @@
 								<md-card class="social_activity_card" (click)="goToUrl(tile.link)">
 									<md-card-header>
 										<div md-card-avatar>
-											<img src="{{tile.icon}}" class="social_activity_icon">
+											<img src="{{tile.icon}}" id="card_icon">
 										</div>
 										<md-card-title class="social_activity_text_title">{{tile.text}}</md-card-title>
 										<md-card-subtitle class="social_activity_text_sub_title">joined in {{tile.time}}</md-card-subtitle>
@@ -86,55 +85,76 @@
 								</md-card>
 							</md-grid-tile>
 						</md-grid-list>
-						<h4> 2. Other Skills </h4>
+						<h4  > 2. Other Skills </h4>
 						<md-chip-list>
-							<md-chip *ngFor="let skill of other_skills"
+							<md-chip *ngFor="let skill of other_skills" selected="true" mdTooltip={{skill.description}} mdTooltipPosition ="above">
+								{{skill.title}}
+							</md-chip>
+						</md-chip-list>
+
+						<h2 id="projects"># Projects</h2>
+						<h4  > 1. Company Projects </h4>
+						<md-grid-list cols="5" rowHeight="200px">
+							<md-grid-tile *ngFor="let project of projects">
+								<md-card>
+									<md-card-header>
+										<div md-card-avatar>
+											<img src="{{project.icon}}" id="card_icon">
+										</div>
+										<md-card-title>{{project.name}}</md-card-title>
+										<md-card-subtitle>{{project.responsible}} {{project.type}} at {{project.company}}</md-card-subtitle>
+									</md-card-header>
+									<md-card-content class="social_activity_content">
+										<a href="{{project.link}}">Link</a>
+										<p>
+											{{project.about}}
+										</p>
+									</md-card-content>
+								</md-card>
+							</md-grid-tile>
+						</md-grid-list>
+
+						<!-- EDUCATION AREA -->
+						<h2 id="educations"># Education</h2>
+						<md-grid-list cols="2" rowHeight="200px">
+							<md-grid-tile *ngFor="let education of educations">
+								<md-card class="my_card">
+									<md-card-title>{{education.school}}</md-card-title>
+									<md-card-subtitle class="">{{education.time}}</md-card-subtitle>
+									<md-card-content>
+										<p>{{education.accomplished}}</p>
+									</md-card-content>
+								</md-card>
+							</md-grid-tile>
+						</md-grid-list>
+
+						<h2 id="volunteerism"># Volunteerism</h2>
+						<md-list>
+							<md-list-item *ngFor="let volunteerisms of volunteerisms">
+								<h3 md-line>{{volunteerisms.place}}</h3>
+								<p md-line> {{volunteerisms.time}}</p>
+								<p md-line> {{volunteerisms.details}}</p>
+							</md-list-item>
+						</md-list>
+
+						<h2 id="hobbies"># Hobbies </h2>
+						<md-chip-list>
+							<md-chip *ngFor="let hobby of hobbies"
 							selected="true">
-							{{skill.title}}
+							{{hobby.title}}
 						</md-chip>
 					</md-chip-list>
+				</div>	
 
-					<!-- EDUCATION AREA -->
-					<h2 id="educations"># Education</h2>
-					<md-grid-list cols="2" rowHeight="200px">
-						<md-grid-tile *ngFor="let education of educations">
-							<md-card class="my_card">
-								<md-card-title>{{education.school}}</md-card-title>
-								<md-card-subtitle class="">{{education.time}}</md-card-subtitle>
-								<md-card-content>
-									<p>{{education.accomplished}}</p>
-								</md-card-content>
-							</md-card>
-						</md-grid-tile>
-					</md-grid-list>
+				<footer>
+					<div>
+						<p>Handmade by me 2017</p>
 
-					<h2 id="volunteerism"># Volunteerism</h2>
-					<md-list>
-						<md-list-item *ngFor="let volunteerisms of volunteerisms">
-							<h3 md-line>{{volunteerisms.place}}</h3>
-							<p md-line> {{volunteerisms.time}}</p>
-							<p md-line> {{volunteerisms.details}}</p>
-						</md-list-item>
-					</md-list>
-
-					<h2 id="hobbies"># Hobbies </h2>
-					<md-chip-list>
-						<md-chip *ngFor="let hobby of hobbies"
-						selected="true">
-						{{hobby.title}}
-					</md-chip>
-				</md-chip-list>
-			</div>	
-
-			<footer>
-			<div>
-				<p>Handmade by me 2017</p>
-
-				<ul *ngFor="let web of aroundTheWebs">
-						<li> <a href="{{web.link}}">{{web.title}}</a> </li>
-					</ul>	
+						<ul *ngFor="let web of aroundTheWebs">
+							<li> <a href="{{web.link}}">{{web.title}}</a> </li>
+						</ul>	
 					</div>
-			</footer>
+				</footer>
 			<!-- <span class="done">
 				<button md-fab (click)="mailTo()">
 					<md-icon>mail outline</md-icon>

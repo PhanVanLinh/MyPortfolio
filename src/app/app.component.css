@@ -1,5 +1,11 @@
+#menu_icon{
+	width: 32px;
+	height: 32px;
+}
+
 .contact_text{
 	color: #99c27a;
+	line-height: 25px;
 }
 
 .navigation a{
@@ -11,13 +17,18 @@
 	color: rgb(255,255,255);
 }
 
+#navigation_icon{
+	width: auto;
+	border-radius: 0px;
+}
+
 .social_activity_card{
 	height: 200px;
 	cursor: pointer;
 }
-.social_activity_icon{
-	width: 30px;
-	height: 30px;
+#card_icon{
+	width: 35px;
+	height: 35px;
 }
 .social_activity_text_title{
 	text-align: left;

@@ -9,64 +9,80 @@ export class AppComponent {
   title = 'MY RESUME';
   author = '{ PHAN VĂN LINH }';
   major = 'Android/IOS/Web Developer';
-  location = '@location: Danang, Vietnam ';
-  email = '@email: phanvanlinh.94vn@gmail.com';
-  phone = '@phone: (+84) 1667832234';
-  about = 'A Full Stack Developer with nearly 3 years of experience in Software Development, Project Maintenance and Project Publication.';
+  languages =   "@languagesKnown: Vietnamese, English";
+  dateOfBirth = "@dateOfBirth: 01/05/1994"
+  location =    '@location: Danang, Vietnam ';
+  email =       '@email: phanvanlinh.94vn@gmail.com';
+  phone =       '@phone: (+84) 1667832234';
+
+  about = '';
   navigations = [
     {
       name: 'About',
-      icon: 'dashboard',
+      icon: 'ic_dashboard.png',
       link: '#about'
-    },{
+    },
+    {
       name: 'Career Highlights',
-      icon: 'subject',
+      icon: 'ic_timeline.png',
        link: '#careerHighlights'
     },
     {
       name: 'Experiences',
-      icon: 'storage',
+      icon: 'ic_subject.png',
        link: '#workingExperiences'
     },
     {
       name: 'Social Activities',
-      icon: 'cloud',
+      icon: 'ic_cloud.png',
       link: '#socialActivities'
     },
     {
       name: 'Skills',
-      icon: 'toys',
+      icon: 'ic_toys.png',
        link: '#skills'
     },
     {
+      name: 'Projects',
+      icon: 'ic_android.png',
+       link: '#projects'
+    },
+    {
       name: 'Education',
-      icon: 'account_balance',
+      icon: 'ic_account_balance.png',
        link: '#educations'
     },
     {
-	    name: 'Volunteerism',
-      icon: 'face',
+      name: 'Volunteerism',
+      icon: 'ic_face.png',
        link: '#volunteerism'
     },
     {
       name: 'Hobbies',
-      icon: 'thumb_up',
+      icon: 'ic_thumb_up.png',
       link: '#hobbies'
     }
+
   ];
 
   careerHighlights = [
     {
-      title: 'Created six user-friendly, aesthetically pleasing and fully functional applications for Android and iOs',
+      title: 'A Full Stack Developer with nearly 3 years of experience in Software Development, Project Maintenance and Project Publication.',
     },
     {
-      title: 'Solid understanding of full mobile and software development life cycles, UIX, web analytics, changing web standards, and Agile methodologies.',
+      title: 'Good understanding of full mobile and software development life cycles, UI, UX, web analytics, git control and Agile methodology.',
     },
     {
-      title: 'Experiences working with MVC, MVP, MVVM and some design patterns',
+      title: 'Good in object-oriented design, data structures, problem solving/analysis and debugging.',
     },
     {
-      title: 'My English still not very good but I am sure that I can and want to work in the enviroment where using full English'
+      title: 'Experiences working with MVC, MVP, MVVM, design patterns and some new technologies.',
+    },
+    {
+      title: 'Able to build a complete moblie application: Server API (PHP+Mysql or NodeJs+MongoDB), client (Android/IOS), intergrate advertisment (StartApp, MobileCore, ...) and public to store (PlayStore or AppStore).',
+    },
+    {
+      title: 'Currently, my English still not very good but I am pretty sure that I can and want to work in the enviroment where using full English.'
     }
   ];
 
@@ -79,7 +95,7 @@ export class AppComponent {
   		},
   		time:'11/2016 - present',
   		position: 'Android Developer',
-  		description:'a'
+  		description:'Work with team for creating a android app base on a iOS application and available API follow Agile method. We have using some latest Android model (MMVM+MVP) and libraries (Databinding, Realm, RxAndroid, Dagger, Glide). '
   	},
   	{
   		company: {
@@ -124,6 +140,7 @@ export class AppComponent {
   other_skills = [
   {
 	title: 'English',
+  description: 'No'
   },
   {
 	title: 'Git',
@@ -159,6 +176,89 @@ export class AppComponent {
   	title: 'Proshow Producer',
   },
   ];
+
+  projects = [
+    {
+      name: 'Kyoriosuku',
+      responsible: 'Maintain',
+      type: 'Android application',
+      company: 'Framgia',
+      time: '2017',
+      icon: 'assets/img/project/kyoriosuku.png',
+      link: 'https://play.google.com/store/apps/details?id=jp.co.mapion.android.app.kyorisoku',
+      about: '',
+    },
+    {
+      name: 'Arukuto',
+      responsible: 'Develop',
+      type: 'Android application',
+      company: 'Framgia',
+      time: '2016,2017',
+      icon: 'assets/img/project/arukuto.png',
+      link: 'https://play.google.com/store/apps/details?id=com.mapion.android.arukuto',
+      about: '',
+    },
+    {
+      name: 'EarCrush',
+      responsible: 'Develop and maintain',
+      type: 'iOS application',
+      company: 'Evizi',
+      time: '2015, 2016',
+      icon: 'assets/img/project/earcrush.png',
+      link: '',
+      about: '',
+    },
+    {
+      name: 'Itson',
+      responsible: '',
+      type: 'Maintin iOS application',
+      company: 'Evizi',
+      time: '2016',
+      icon: 'assets/img/project/itson.png',
+      link: 'http://www.itsoninc.com/',
+      about: '',
+    },
+    {
+      name: 'Weaved',
+      responsible: 'Maintain',
+      type: 'Android application',
+      company: 'Evizi',
+      time: '2015',
+      icon: 'assets/img/project/weaved.png',
+      link: 'https://itunes.apple.com/us/app/weaved/id937372469?mt=8',
+      about: '',
+    },
+    {
+      name: 'Yoics',
+      responsible: 'Maintain',
+      type: 'Android application',
+      company: 'Evizi',
+      time: '2015',
+      icon: 'assets/img/project/yoics.png',
+      link: 'https://itunes.apple.com/us/app/look-camera-viewer/id768563141?mt=8',
+      about: '',
+    },
+     {
+      name: 'Buzzr',
+      responsible: 'Maintain',
+      type: 'Android application',
+      company: 'Evizi',
+      time: '2015',
+      icon: 'assets/img/project/buzzr.png',
+      link: '',
+      about: '',
+    },
+    {
+      name: 'Fresh Food',
+      responsible: '',
+      type: 'Web project',
+      company: 'Code Engine Studio',
+      time: '2015',
+      icon: 'assets/img/project/freshfood.png',
+      link: 'https://medium.com/totoro-design-in-english/fresh-food-project-design-process-b0c9fbcc9a77',
+      about: '',
+    }
+  ]
 
   educations = [
     {
