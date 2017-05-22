@@ -35,36 +35,44 @@
 						<h2 id="workingExperiences"># Working Experiences</h2>
 
 						<md-list>
-							<md-list-item *ngFor="let working of workingExperiences">
-								<img md-list-icon src={{working.company.logo}} id="card_icon" alt="...">
-								<h3 md-line class="title"> {{working.company.name}} </h3>
+							<md-list-item class="card" *ngFor="let working of workingExperiences">
+								<img md-list-icon src={{working.company.logo}} class="icon" alt="...">
+								<a md-line href="{{working.company.link}}"><p class="title"> {{working.company.name}} </p></a>
+								<p md-line class="sub_title">{{working.position}}</p>
 								<p md-line class="sub_title">
 									<span> {{working.company.location}} </span>
 									<span> -- {{working.time}} </span>
 								</p>
-								<p md-line class="details" id="mutilple_lines">{{working.description}}</p>
+								<p md-line class="details" id="mutilple_lines">
+									<span class="line-breaker">
+										{{working.description}}
+									</span>
+								</p>
+								<p md-line>
+								</p>
 							</md-list-item>
 						</md-list>	
 
 						<h2 id="socialActivities"># Social Activities </h2>
 						<md-grid-list cols="4" rowHeight="300px">
 							<md-grid-tile *ngFor="let tile of tiles" >
-								<md-card class="social_activity_card" (click)="goToUrl(tile.link)">
+								<a href="{{tile.link}}">
+								<md-card class="card" style="height: 200px">
 									<md-card-header>
 										<div md-card-avatar>
-											<img src="{{tile.icon}}" id="card_icon">
+											<img src="{{tile.icon}}" class="icon">
 										</div>
-										<md-card-title class="social_activity_text_title">{{tile.text}}</md-card-title>
-										<md-card-subtitle class="social_activity_text_sub_title">joined in {{tile.time}}</md-card-subtitle>
+										<md-card-title class="title">{{tile.text}}</md-card-title>
+										<md-card-subtitle class="sub_title">joined in {{tile.time}}</md-card-subtitle>
 									</md-card-header>
 									<img md-card-image class="social_activity_image" src="{{tile.image}}">
-									<md-card-content class="social_activity_content">
+									<md-card-content class="details">
 										<p>
 											{{tile.content}}
 										</p>
 									</md-card-content>
 								</md-card>
-
+								</a>
 							</md-grid-tile>
 						</md-grid-list>
 
@@ -73,53 +81,71 @@
 						<h4> 1. Top Skills </h4>
 						<md-grid-list cols="3" rowHeight="300px">
 							<md-grid-tile *ngFor="let skill of top_skills">
-								<md-card >
-									<md-card-title>{{skill.title}}</md-card-title>
-									<md-card-subtitle>{{skill.experience}}</md-card-subtitle>
-									<md-card-content class="social_activity_content">
-										<p>
+								<md-card class="card" style="height: 200px">
+									<md-card-title class="title">{{skill.title}}</md-card-title>
+									<md-card-subtitle class="sub_title">{{skill.experience}}</md-card-subtitle>
+									<md-card-content class="details">
+										<span class="line-breaker">
 											{{skill.description}}
-										</p>
+										</span>
 									</md-card-content>
-
 								</md-card>
 							</md-grid-tile>
 						</md-grid-list>
-						<h4  > 2. Other Skills </h4>
+						<h4  > 2. Languages </h4>
 						<md-chip-list>
 							<md-chip *ngFor="let skill of other_skills" selected="true" mdTooltip={{skill.description}} mdTooltipPosition ="above">
 								{{skill.title}}
 							</md-chip>
 						</md-chip-list>
 
+						<h4> 3. Framework/Platform </h4>
+						<md-chip-list>
+							<md-chip *ngFor="let framework of frameworks" selected="true">
+								{{framework.title}}
+							</md-chip>
+						</md-chip-list>
+
+						<h4> 4.Tools </h4>
+						<md-chip-list>
+							<md-chip *ngFor="let tool of tools" selected="true">
+								{{tool.title}}
+							</md-chip>
+						</md-chip-list>
+
 						<h2 id="projects"># Projects</h2>
-						<h4  > 1. Company Projects </h4>
+						<h4> 1. Company Projects </h4>
 						<md-grid-list cols="5" rowHeight="200px">
 							<md-grid-tile *ngFor="let project of projects">
-								<md-card>
+								<md-card class="card" style="height: 100px">
 									<md-card-header>
 										<div md-card-avatar>
-											<img src="{{project.icon}}" id="card_icon">
+											<img src="{{project.icon}}" class="icon">
 										</div>
-										<md-card-title>{{project.name}}</md-card-title>
-										<md-card-subtitle>{{project.responsible}} {{project.type}} at {{project.company}}</md-card-subtitle>
+										<md-card-title ><a href="{{project.link}}" class="title">{{project.name}}</a></md-card-title>
+										<md-card-subtitle class="sub_title">{{project.responsible}} {{project.type}} at {{project.company}}</md-card-subtitle>
 									</md-card-header>
-									<md-card-content class="social_activity_content">
-										<a href="{{project.link}}">Link</a>
-										<p>
-											{{project.about}}
-										</p>
+									<md-card-content class="details">
+										
 									</md-card-content>
 								</md-card>
 							</md-grid-tile>
 						</md-grid-list>
+						<h4> 2. Personal Project </h4>
+						<p><em>Not successful projects because it suspended from Play Store but it is still a lot of my efforts</em></p>
+						<md-list>
+							<md-list-item *ngFor="let personalProject of personalProjects" class="card">
+								<a md-line href="{{personalProject.link}}" class="title">{{personalProject.title}}</a>
+								<a md-line href="{{personalProject.link}}">{{personalProject.link}}</a>
+							</md-list-item>
+						</md-list>
 
 						<!-- EDUCATION AREA -->
 						<h2 id="educations"># Education</h2>
 						<md-grid-list cols="2" rowHeight="200px">
 							<md-grid-tile *ngFor="let education of educations">
-								<md-card class="my_card">
-									<md-card-title>{{education.school}}</md-card-title>
+								<md-card class="card">
+									<md-card-title><a href="{{education.link}}" class="title">{{education.school}}</a></md-card-title>
 									<md-card-subtitle class="">{{education.time}}</md-card-subtitle>
 									<md-card-content>
 										<p>{{education.accomplished}}</p>
@@ -130,9 +156,9 @@
 
 						<h2 id="volunteerism"># Volunteerism</h2>
 						<md-list>
-							<md-list-item *ngFor="let volunteerisms of volunteerisms">
-								<h3 md-line>{{volunteerisms.place}}</h3>
-								<p md-line> {{volunteerisms.time}}</p>
+							<md-list-item *ngFor="let volunteerisms of volunteerisms" class="card">
+								<h3 md-line><a class="title" href="{{volunteerisms.link}}">{{volunteerisms.place}}</a></h3>
+								<p md-line class="sub_title"> {{volunteerisms.time}}</p>
 								<p md-line> {{volunteerisms.details}}</p>
 							</md-list-item>
 						</md-list>
