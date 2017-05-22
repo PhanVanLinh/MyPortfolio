@@ -4,9 +4,16 @@
 
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: 'Open Sans', Roboto, sans-serif;
   background-image: url("assets/img/general/bg.jpg");
   color: #ffffff;
   font-size: 16px;
@@ -18,7 +25,8 @@ p{
 
 ul{
   margin:0px;
-  padding: 5px;
+  padding: 4px;
+  list-style-type: none;
 }
 
 a{
@@ -27,7 +35,7 @@ a{
 }
 
 h1{
-  font-weight: 800;
+  font-weight: 600 !important;
 }
 
 h2{
@@ -87,13 +95,6 @@ md-chip{
   margin: 0 auto;
 }
 
-.done {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: white;
-}
-
 .example-sidenav-fab-container .md-sidenav-content,
 .example-sidenav-fab-container md-sidenav {
   display: flex;
@@ -101,34 +102,38 @@ md-chip{
   background-color: transparent;
 }
 
-.example-scrolling-content {
-  
+.example-scrolling-content {  
   min-height: 100%;
 }
 
-.example-fab {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
+.card{
+  
 }
 
-.my_card{
-	text-align: left;
-}
-
-.title{
+.card .title{
   color: #7698de;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-.sub_title{
+.card .sub_title{
   color: rgba(255,255,255,.7);
+  font-size: 14px;
 }
 
-.details{
+.card .details{
   color: #ffffff;
+  font-size: 14px !important;
+}
+
+.card .icon{
+  width: 35px;
+  height: 35px;
 }
 
 #mutilple_lines{
   white-space: normal;
+}
+
+.line-breaker {
+  white-space: pre-line;
 }
