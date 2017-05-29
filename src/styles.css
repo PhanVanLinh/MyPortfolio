@@ -137,3 +137,7 @@ md-chip{
 .line-breaker {
   white-space: pre-line;
 }
+
+#line-breaker {
+  white-space: pre-line;
+}
